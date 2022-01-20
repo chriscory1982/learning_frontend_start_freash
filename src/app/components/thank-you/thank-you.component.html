@@ -1,0 +1,15 @@
+<header>
+  <h3>Thank You Notes</h3>
+</header>
+<div class="row">
+  <div class="col">
+    <app-thank-you-entry (cardAdded)="addItem($event)"></app-thank-you-entry>
+  </div>
+  <div class="col">
+    <app-thank-you-list
+      (cardSent)="markAsSent($event)"
+      [list]="cardList$ | async"
+      [caption]="listTitle"
+    ></app-thank-you-list>
+  </div>
+</div>
